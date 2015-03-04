@@ -23,6 +23,7 @@
     "grunt-jsbeautifier": "^0.2.7"
   },
   "dependencies": {
+    "camelize": "git://github.com/nathanfaucett/camelize",
     "environment": "git://github.com/nathanfaucett/environment",
     "is_element": "git://github.com/nathanfaucett/is_element"
   }

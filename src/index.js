@@ -1,5 +1,6 @@
 var environment = require("environment"),
-    isElement = require("is_element");
+    isElement = require("is_element"),
+    camelize = require("camelize");
 
 
 var defaultView = environment.document.defaultView,
@@ -9,11 +10,11 @@ var defaultView = environment.document.defaultView,
 module.exports = function getCurrentStyle(node, style) {
     if (isElement(node)) {
         if (hasGetComputedStyle) {
-            return defaultView.getComputedStyle(node, "")[style] || "";
+            return defaultView.getComputedStyle(node, "")[camelize(style)] || "";
         } else if (node.currentStyle) {
-            return node.currentStyle[style] || "";
+            return node.currentStyle[camelize(style)] || "";
         } else {
-            return node.style[style] || "";
+            return node.style[camelize(style)] || "";
         }
     } else {
         return "";
