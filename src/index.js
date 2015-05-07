@@ -7,7 +7,10 @@ var defaultView = environment.document.defaultView,
     hasGetComputedStyle = !!(defaultView && defaultView.getComputedStyle);
 
 
-module.exports = function getCurrentStyle(node, style) {
+module.exports = getCurrentStyle;
+
+
+function getCurrentStyle(node, style) {
     if (isElement(node)) {
         if (hasGetComputedStyle) {
             return defaultView.getComputedStyle(node, "")[camelize(style)] || "";
@@ -19,4 +22,4 @@ module.exports = function getCurrentStyle(node, style) {
     } else {
         return "";
     }
-};
+}
