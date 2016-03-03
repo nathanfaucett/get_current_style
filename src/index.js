@@ -5,31 +5,38 @@ var supports = require("supports"),
     camelize = require("camelize");
 
 
-var baseGetCurrentStyle;
+var baseGetCurrentStyles;
 
 
 module.exports = getCurrentStyle;
 
 
 function getCurrentStyle(node, style) {
-    if (isElement(node) && isString(style)) {
-        return baseGetCurrentStyle(node, style);
+    if (isElement(node)) {
+        if (isString(style)) {
+            return baseGetCurrentStyles(node)[camelize(style)] || "";
+        } else {
+            return baseGetCurrentStyles(node);
+        }
     } else {
-        return "";
+        if (isString(style)) {
+            return "";
+        } else {
+            return null;
+        }
     }
 }
 
-
 if (supports.dom && environment.document.defaultView) {
-    baseGetCurrentStyle = function(node, style) {
-        return node.ownerDocument.defaultView.getComputedStyle(node, "")[camelize(style)] || "";
+    baseGetCurrentStyles = function(node) {
+        return node.ownerDocument.defaultView.getComputedStyle(node, "");
     };
 } else {
-    baseGetCurrentStyle = function(node, style) {
+    baseGetCurrentStyles = function(node) {
         if (node.currentStyle) {
-            return node.currentStyle[camelize(style)] || "";
+            return node.currentStyle;
         } else {
-            return node.style[camelize(style)] || "";
+            return node.style;
         }
     };
 }
