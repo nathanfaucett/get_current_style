@@ -1,7 +1,7 @@
 {
-  "name": "get_current_style",
+  "name": "@nathanfaucett/get_current_style",
   "version": "0.0.1",
-  "description": "getCurrentStyle for the browser and node.js",
+  "description": "gets css property style for element",
   "repository": {
     "type": "git",
     "url": "https://github.com/nathanfaucett/get_current_style.git"
@@ -19,17 +19,17 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-jsbeautifier": "^0.2.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-jsbeautifier": "^0.2.13",
     "tape": "^4.2.0",
     "zuul": "^3.3.0"
   },
   "dependencies": {
-    "camelize": "git://github.com/nathanfaucett/camelize.git",
-    "environment": "git://github.com/nathanfaucett/environment.git",
-    "supports": "git://github.com/nathanfaucett/supports.git",
-    "is_element": "git://github.com/nathanfaucett/is_element.git",
-    "is_string": "git://github.com/nathanfaucett/is_string.git"
+    "@nathanfaucett/camelize": "^0.0.1",
+    "@nathanfaucett/environment": "^0.0.1",
+    "@nathanfaucett/supports": "^0.0.1",
+    "@nathanfaucett/is_element": "^0.0.1",
+    "@nathanfaucett/is_string": "^0.0.1"
   }
 }

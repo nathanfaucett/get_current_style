@@ -1,4 +1,4 @@
 getCurrentStyle
 =======
 
-getCurrentStyle for the browser and node.js
+gets css property style for element

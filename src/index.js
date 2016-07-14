@@ -1,8 +1,8 @@
-var supports = require("supports"),
-    environment = require("environment"),
-    isElement = require("is_element"),
-    isString = require("is_string"),
-    camelize = require("camelize");
+var supports = require("@nathanfaucett/supports"),
+    environment = require("@nathanfaucett/environment"),
+    isElement = require("@nathanfaucett/is_element"),
+    isString = require("@nathanfaucett/is_string"),
+    camelize = require("@nathanfaucett/camelize");
 
 
 var baseGetCurrentStyles;
