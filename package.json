@@ -1,6 +1,6 @@
 {
   "name": "@nathanfaucett/get_current_style",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "gets css property style for element",
   "repository": {
     "type": "git",
@@ -27,8 +27,8 @@
   },
   "dependencies": {
     "@nathanfaucett/camelize": "^0.0.1",
-    "@nathanfaucett/environment": "^0.0.1",
-    "@nathanfaucett/supports": "^0.0.1",
+    "@nathanfaucett/environment": "^0.0.2",
+    "@nathanfaucett/supports": "^0.0.2",
     "@nathanfaucett/is_element": "^0.0.1",
     "@nathanfaucett/is_string": "^0.0.1"
   }
